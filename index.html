@@ -3,19 +3,53 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gratuity Calculator UAE</title>
+<title>Gratuity Calculator UAE 2026 | MOHRE End of Service Calculator</title>
+<meta name="description" content="Free UAE Gratuity Calculator 2026 based on MOHRE Labour Law. Calculate end-of-service benefits instantly for Dubai, Abu Dhabi, Sharjah & all Emirates.">
+<meta name="keywords" content="gratuity calculator UAE, UAE end of service calculator, MOHRE gratuity 2026, Dubai gratuity calculator, UAE labour law gratuity">
+<meta name="author" content="Fazal Niazi">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Gratuity Calculator UAE 2026 | MOHRE End of Service Calculator">
+<meta property="og:description" content="Free UAE Gratuity Calculator based on MOHRE 2026 rules. Calculate instantly for Dubai, Abu Dhabi & all Emirates.">
+<meta property="og:url" content="https://fazalniazi130-hash.github.io/gratuity-calculator-uae/">
+<meta property="og:type" content="website">
+
+<!-- Canonical -->
+<link rel="canonical" href="https://gratuitycalculatruae.com">
 
 <style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
 body {
     font-family: Arial, sans-serif;
     background: #f2f5f9;
+    min-height: 100vh;
+    padding: 20px;
+}
+.page-header {
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+.page-header a {
+    color: #1e4db7;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+.page-header p {
+    font-size: 12px;
+    color: #666;
+    margin-top: 5px;
+}
+.wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 .container {
-    width: 350px;
+    width: 100%;
+    max-width: 380px;
     background: #fff;
     padding: 25px;
     border-radius: 12px;
@@ -24,13 +58,25 @@ body {
 h2 {
     text-align: center;
     color: #1e4db7;
+    margin-bottom: 15px;
+}
+label {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 3px;
+    display: block;
 }
 input, select {
     width: 100%;
     padding: 10px;
-    margin: 10px 0;
+    margin-bottom: 12px;
     border-radius: 8px;
     border: 1px solid #ccc;
+    font-size: 14px;
+}
+input:focus, select:focus {
+    border-color: #1e4db7;
+    outline: none;
 }
 button {
     width: 100%;
@@ -40,69 +86,172 @@ button {
     border: none;
     border-radius: 8px;
     cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
 }
+button:hover { background: #1a3fa0; }
 .result {
     margin-top: 15px;
     font-weight: bold;
     text-align: center;
+    color: #1e4db7;
+    font-size: 18px;
 }
+.breakdown {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #444;
+    background: #f8f9ff;
+    border-radius: 8px;
+    padding: 10px;
+    display: none;
+}
+.breakdown div {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 0;
+    border-bottom: 1px solid #eee;
+}
+.breakdown div:last-child { border-bottom: none; }
+.footer-links {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #666;
+}
+.footer-links a {
+    color: #1e4db7;
+    text-decoration: none;
+    margin: 0 5px;
+    font-weight: bold;
+}
+.badges {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+.badge-link {
+    background: #1e4db7;
+    color: white !important;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    text-decoration: none;
+}
+.badge-link.firefox { background: #FF7139; }
+.badge-link.edge { background: #0078D7; }
+.badge-link.website { background: #28a745; }
 </style>
-
 </head>
 <body>
 
+<div class="page-header">
+    <a href="https://gratuitycalculatruae.com">🌐 Visit Full Website: gratuitycalculatruae.com</a>
+    <p>Free UAE Gratuity Calculator — MOHRE 2026 Rules</p>
+</div>
+
+<div class="wrapper">
 <div class="container">
-    <h2>Gratuity Calculator UAE</h2>
+    <h2>🇦🇪 Gratuity Calculator UAE</h2>
 
-    <input type="number" id="salary" placeholder="Basic Salary (AED)">
+    <label>Basic Salary (AED)</label>
+    <input type="number" id="salary" placeholder="e.g. 5000" min="0">
 
+    <label>Reason for Leaving</label>
     <select id="reason">
         <option value="">Select Reason</option>
         <option value="resign">Resignation</option>
         <option value="terminate">Termination</option>
     </select>
 
+    <label>Contract Type</label>
     <select id="contract">
         <option value="">Select Contract</option>
         <option value="limited">Limited</option>
         <option value="unlimited">Unlimited</option>
     </select>
 
+    <label>Start Date</label>
     <input type="date" id="start">
+
+    <label>End Date</label>
     <input type="date" id="end">
 
     <button onclick="calculate()">Calculate Gratuity</button>
 
     <div class="result" id="result"></div>
+    <div class="breakdown" id="breakdown"></div>
+
+    <div class="footer-links">
+        <p>Download Extension:</p>
+        <div class="badges">
+            <a class="badge-link firefox" href="https://addons.mozilla.org/en-US/firefox/" target="_blank">🦊 Firefox</a>
+            <a class="badge-link" href="https://chromewebstore.google.com/detail/cbpckondifgdnaebfhkadibnjjjkaajn" target="_blank">🟡 Chrome</a>
+            <a class="badge-link edge" href="https://microsoftedge.microsoft.com/addons/detail/gratuity-calculator-uae/0RDCKBMPWKN8" target="_blank">🔵 Edge</a>
+            <a class="badge-link website" href="https://gratuitycalculatruae.com" target="_blank">🌐 Website</a>
+        </div>
+    </div>
+</div>
 </div>
 
 <script>
 function calculate() {
-
-    let salary = document.getElementById("salary").value;
+    let salary = parseFloat(document.getElementById("salary").value);
     let start = new Date(document.getElementById("start").value);
     let end = new Date(document.getElementById("end").value);
+    let reason = document.getElementById("reason").value;
+    let contract = document.getElementById("contract").value;
 
-    if (!salary || !start || !end) {
+    if (!salary || !document.getElementById("start").value || !document.getElementById("end").value || !reason || !contract) {
         alert("Please fill all fields");
         return;
     }
 
-    let years = (end - start) / (1000 * 60 * 60 * 24 * 365);
-
-    let gratuity = 0;
-
-    if (years < 1) {
-        gratuity = 0;
-    } else if (years <= 5) {
-        gratuity = (salary / 30) * 21 * years;
-    } else {
-        gratuity = ((salary / 30) * 21 * 5) + ((salary / 30) * 30 * (years - 5));
+    if (end <= start) {
+        alert("End date must be after start date");
+        return;
     }
 
-    document.getElementById("result").innerHTML =
-        "Gratuity: AED " + gratuity.toFixed(2);
+    let years = (end - start) / (1000 * 60 * 60 * 24 * 365.25);
+
+    if (years < 1) {
+        document.getElementById("result").innerHTML = "❌ Less than 1 year — No gratuity";
+        document.getElementById("breakdown").style.display = "none";
+        return;
+    }
+
+    let dailySalary = salary / 30;
+    let part1 = 0, part2 = 0;
+    let part1Years = Math.min(years, 5);
+    let part2Years = Math.max(years - 5, 0);
+
+    part1 = dailySalary * 21 * part1Years;
+    part2 = dailySalary * 30 * part2Years;
+
+    let gratuity = part1 + part2;
+    let maxGratuity = salary * 24;
+    if (gratuity > maxGratuity) gratuity = maxGratuity;
+
+    let totalYears = Math.floor(years);
+    let totalMonths = Math.floor((years % 1) * 12);
+
+    document.getElementById("result").innerHTML = "✅ Gratuity: AED " + gratuity.toLocaleString('en-AE', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+
+    let bd = document.getElementById("breakdown");
+    bd.style.display = "block";
+    bd.innerHTML = `
+        <div><span>Service Period</span><span>${totalYears}y ${totalMonths}m</span></div>
+        <div><span>Daily Salary</span><span>AED ${dailySalary.toFixed(2)}</span></div>
+        <div><span>First 5 Years (21 days)</span><span>AED ${part1.toFixed(2)}</span></div>
+        ${part2Years > 0 ? `<div><span>After 5 Years (30 days)</span><span>AED ${part2.toFixed(2)}</span></div>` : ''}
+        <div><span><b>Total Gratuity</b></span><span><b>AED ${gratuity.toLocaleString('en-AE', {minimumFractionDigits:2})}</b></span></div>
+    `;
 }
+
+// Set today as default end date
+document.getElementById("end").value = new Date().toISOString().split('T')[0];
 </script>
 
 </body>
