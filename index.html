@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gratuity Calculator UAE</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f5f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    width: 350px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+h2 {
+    text-align: center;
+    color: #1e4db7;
+}
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+button {
+    width: 100%;
+    padding: 12px;
+    background: #1e4db7;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.result {
+    margin-top: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+    <h2>Gratuity Calculator UAE</h2>
+
+    <input type="number" id="salary" placeholder="Basic Salary (AED)">
+
+    <select id="reason">
+        <option value="">Select Reason</option>
+        <option value="resign">Resignation</option>
+        <option value="terminate">Termination</option>
+    </select>
+
+    <select id="contract">
+        <option value="">Select Contract</option>
+        <option value="limited">Limited</option>
+        <option value="unlimited">Unlimited</option>
+    </select>
+
+    <input type="date" id="start">
+    <input type="date" id="end">
+
+    <button onclick="calculate()">Calculate Gratuity</button>
+
+    <div class="result" id="result"></div>
+</div>
+
+<script>
+function calculate() {
+
+    let salary = document.getElementById("salary").value;
+    let start = new Date(document.getElementById("start").value);
+    let end = new Date(document.getElementById("end").value);
+
+    if (!salary || !start || !end) {
+        alert("Please fill all fields");
+        return;
+    }
+
+    let years = (end - start) / (1000 * 60 * 60 * 24 * 365);
+
+    let gratuity = 0;
+
+    if (years < 1) {
+        gratuity = 0;
+    } else if (years <= 5) {
+        gratuity = (salary / 30) * 21 * years;
+    } else {
+        gratuity = ((salary / 30) * 21 * 5) + ((salary / 30) * 30 * (years - 5));
+    }
+
+    document.getElementById("result").innerHTML =
+        "Gratuity: AED " + gratuity.toFixed(2);
+}
+</script>
+
+</body>
+</html>
